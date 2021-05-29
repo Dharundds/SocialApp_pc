@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <title>Social App</title>
+  </head>
+  <body>
+    <h1>Social media App</h1>
+    <form method="POST">
+      <label>
+        Name:
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          style="font-weight: bold"
+          value=""
+          required
+          autocomplete="off"
+        />
+      </label>
+      <label
+        >Message
+        <input
+          type="text"
+          id="msg_input"
+          name="msg"
+          placeholder="type something"
+          value=""
+        />
+      </label>
+      <button type="submit">Send</button>
+    </form>
+    <div class="msg">
+      {% for chat in chats %}
+      <div class="name">{{chat[1]}}:{{chat[2]}}</div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
