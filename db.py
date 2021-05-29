@@ -26,4 +26,3 @@ def delete_all():
     result = execute_query(sql_query)
 
 
-delete_all()
